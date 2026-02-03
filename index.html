@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعليمات اختبار مهارات فهم النص النبوي</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #2C4B7D; 
+            --secondary-gold: #B69A5E; 
+            --background-light: #FFFFFF;
+            --text-color: #333333; 
+            --section-bg: #FFFBF0; 
+            --correct-bg: #E9F7EF; 
+            --correct-border: #27AE60; 
+            --default-border: #E0E0E0; 
+            --box-bg: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Noto Naskh Arabic', 'Cairo', sans-serif;
+            line-height: 1.6; 
+            margin: 0;
+            padding: 20px;
+            background-color: #F9F9F9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px; 
+            background-color: var(--background-light);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            border: 1px solid #ECECEC;
+            text-align: center; /* توسيط الشعارات */
+        }
+
+        /* تنسيق الشعارات */
+        .header-logos {
+            margin-bottom: 30px;
+        }
+        .logo-uni {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .title-calligraphy {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .formal-text {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            text-align: right;
+        }
+        
+        .formal-text p {
+            margin: 0;
+            margin-bottom: 12px;
+        }
+
+        .greeting {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+
+        .section-box {
+            background-color: var(--section-bg); 
+            border: 1px solid #EEE0C7;
+            border-radius: 8px;
+            margin-top: 25px;
+            overflow: hidden;
+            text-align: right;
+        }
+
+        .section-header {
+            font-weight: 800;
+            color: var(--secondary-gold); 
+            background-color: #FFFAE6; 
+            display: block;
+            font-size: 1.2em;
+            padding: 15px 20px; 
+            border-bottom: 1px solid #EEE0C7;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .section-detail {
+            padding: 25px;
+            display: block;
+            font-size: 1.05em;
+            color: #444;
+            font-weight: 500;
+        }
+
+        .bullet-point {
+            margin-left: 8px;
+            color: var(--secondary-gold);
+            font-weight: bold;
+        }
+
+        /* زر الانتقال للاختبار */
+        .action-area {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .btn-start {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: #fff;
+            padding: 18px 50px;
+            font-size: 1.4em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 75, 125, 0.3);
+            font-family: 'Cairo', sans-serif;
+        }
+        .btn-start:hover {
+            background-color: var(--secondary-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(182, 154, 94, 0.4);
+            color: #fff;
+        }
+
+        .question-card {
+            border: 1px solid #D6DBDF;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .question-text {
+            font-weight: 700;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #000;
+            display: flex;
+            align-items: baseline;
+        }
+        
+        .q-number {
+            color: var(--secondary-gold);
+            margin-left: 8px;
+            font-weight: 800;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .option-box {
+            background-color: var(--box-bg);
+            border: 1px solid var(--default-border);
+            border-radius: 6px;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .option-box.correct {
+            background-color: var(--correct-bg);
+            border: 1px solid var(--correct-border);
+        }
+
+        .check-square {
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .option-box.correct .check-square {
+            background-color: var(--correct-border);
+            border-color: var(--correct-border);
+            color: white;
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-weight: 600;
+            font-size: 1.1em;
+            text-align: center;
+            color: var(--primary-blue);
+        }
+
+        .researcher-card {
+            margin-top: 40px;
+            background-color: #F9F9F9;
+            border: 1px solid var(--primary-blue);
+            padding: 12px 25px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-blue);
+        }
+
+        @media (max-width: 600px) {
+            .options-grid { grid-template-columns: 1fr; }
+            .btn-start { width: 100%; padding: 15px; font-size: 1.2em; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-logos">
+            <img src="logo.png" alt="شعار الجامعة الإسلامية" class="logo-uni">
+            <img src="2.jpeg" alt="تنمية مهارات فهم النص النبوي" class="title-calligraphy">
+        </div>
+
+        <div class="formal-text">
+            <p class="greeting">أَخِي الطَّالِبُ: السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ.</p>
+            <p>
+                يَهْدِفُ هَذَا الِاخْتِبَارُ إِلَى قِيَاسِ مَهَارَاتِ فَهْمِ النَّصِّ النَّبَوِيّ لَدَيْكَ، وَيَتَكَوَّنُ مِنْ أَرْبَعَةِ نُصُوصٍ نَبَوِيَّةٍ يَعْقبُ كُلَّ نَصٍّ عَدَدٌ مِنْ أَسْئِلَةِ الِاخْتِيَارِ مِنْ مُتَعَدِّدٍ.
+            </p>
+        </div>
+
+        <div class="section-box">
+            <span class="section-header">تَعْلِيمَاتُ الِاخْتِبَارِ</span>
+            <span class="section-detail">
+                <p>لِتَحْقِيقِ أَفْضَلِ أَدَاءٍ فِي هَذَا الاخْتِبَارِ يُرْجَى مِنْكَ الِالْتِزَامَ بِمَا يَأْتِي:</p>
+                <span class="bullet-point">●</span> سَجِّلْ بَيَانَاتِكَ فِي النَّمُوذَجِ قَبْلَ البَدْءِ فِي الإِجَابَةِ.<br>
+                <span class="bullet-point">●</span> اقْرَأِ النَّصَّ النَّبَوِيَّ المُرْفَق قِرَاءَةً وَاعِيَةً وَمُرَكَّزَةً.<br>
+                <span class="bullet-point">●</span> أَجِبْ عَنْ جَمِيعِ أَسْئِلَةِ الِاخْتِبَارِ، وَلَا تَتْرُكْ أَيَّ سُؤَالٍ دُونَ الإِجَابَةِ عَنْهُ.<br>
+                <span class="bullet-point">●</span> الزَّمَنُ المُحَدَّدُ لِلاخْتِبَارِ ( 30 ) دَقِيقَةً، وَاحْرِصْ عَلَى الِانْجَازِ قَبْلَ انْتِهَاءِ الوَقْتِ المُحَدَّدِ.
+            </span>
+        </div>
+
+        <div class="action-area">
+            <a href="https://script.google.com/macros/s/AKfycbyniaCxSYuwnNqwXfpPAlDX-vpgzAwb1oRP8ChAMnDoBCZKydK5TLLi4SYge7pqoJOs/exec" class="btn-start">
+                اضغط هنا للبدء في الاختبار
+            </a>
+        </div>
+
+        <div class="section-box">
+            <span class="section-header">مِثَالٌ تَوْضِيحِيٌّ</span>
+            <span class="section-detail">
+                <p style="margin-bottom: 20px;">وَإِلَيْكَ المِثَال فِي كَيْفِيَّةِ اخْتِيَارِ الإِجَابَةِ الصَّحِيحَةِ:</p>
+                
+                <div class="question-card">
+                    <div class="question-text">
+                        <span class="q-number">1 - </span>
+                        &nbsp; معنى «جُنَّةٌ» في قوله ﷺ: « الصَّوْمُ جُنَّةٌ » :
+                    </div>
+
+                    <div class="options-grid">
+                        <div class="option-box correct">
+                            <span class="option-text">أ) وِقَايَةٌ وَتَحْصِينٌ</span>
+                            <div class="check-square">✔</div>
+                        </div>
+                        <div class="option-box">
+                            <span class="option-text">ب) طُمَأْنِينَةٌ وَارْتِيَاحٌ</span>
+                            <div class="check-square"></div>
+                        </div>
+                        <div class="option-box">
+                            <span class="option-text">ج) أَمْنٌ وَإِيمَانٌ</span>
+                            <div class="check-square"></div>
+                        </div>
+                        <div class="option-box">
+                            <span class="option-text">د) أَجْرٌ وَثَوَابٌ</span>
+                            <div class="check-square"></div>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+
+        <div class="footer-note">
+            <p>شُكْرِي وَتَقْدِيرِي لِتَعَاوُنِكَ، وَدُعَائِي بِالتَّوْفِيقِ وَالنَّجَاحِ.</p>
+        </div>
+
+        <div class="researcher-card">
+            <span>إِعْدَادُ: أَحْمَد تَشَارِي رَحِيم</span>
+        </div>
+        
+    </div>
+
+</body>
+</html>
