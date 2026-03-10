@@ -16,15 +16,14 @@
             --background-light: #FFFFFF;
             --text-color: #333333; 
             --section-bg: #FFFBF0; 
-            --default-border: #E0E0E0; 
         }
 
         body {
             font-family: 'Noto Naskh Arabic', 'Cairo', sans-serif;
-            line-height: 1.8; 
+            line-height: 1.9; 
             margin: 0;
             padding: 20px;
-            background-color: #F9F9F9;
+            background-color: #F3F4F6;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -36,95 +35,131 @@
             width: 100%;
             max-width: 900px; 
             background-color: var(--background-light);
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            padding: 40px 50px;
-            border: 1px solid #ECECEC;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+            padding: 40px 50px 35px;
+            border: 1px solid #E5E7EB;
         }
 
         .header-logos {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
         .logo-uni {
-            max-width: 160px;
+            max-width: 150px;
             height: auto;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .title-calligraphy {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 0 auto;
+            margin: 0 auto 10px;
+        }
+
+        .top-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .top-title h1 {
+            margin: 0;
+            font-size: 1.4em;
+            color: var(--primary-blue);
+            letter-spacing: 0.5px;
+        }
+
+        .letter-box {
+            background: #F9FAFB;
+            border-radius: 12px;
+            border: 1px solid #E5E7EB;
+            padding: 22px 24px 18px;
+            margin-bottom: 20px;
+        }
+
+        .to-line {
+            font-size: 1.08em;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .to-line span.placeholder {
+            display: inline-block;
+            min-width: 220px;
+            border-bottom: 1px dotted #9CA3AF;
+            margin: 0 4px;
+        }
+
+        .salam-line {
+            font-size: 1.02em;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
         }
 
         .formal-text {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            text-align: right;
-            color: #222;
+            font-size: 1.03em;
+            text-align: justify;
+            color: #111827;
         }
 
         .formal-text p {
-            margin: 0 0 14px 0;
+            margin: 0 0 12px 0;
         }
 
-        .greeting-line {
-            font-weight: 700;
-            color: var(--primary-blue);
+        .intro-space {
+            height: 6px;
         }
 
         .section-box {
             background-color: var(--section-bg); 
-            border: 1px solid #EEE0C7;
-            border-radius: 8px;
-            margin-top: 20px;
-            padding: 20px 25px;
+            border: 1px solid #F3E4C4;
+            border-radius: 12px;
+            margin-top: 18px;
+            padding: 18px 20px 14px;
             text-align: right;
             font-size: 1.02em;
         }
 
-        .bullet-point {
-            margin-left: 8px;
-            color: var(--secondary-gold);
-            font-weight: bold;
-        }
-
-        .action-area {
-            margin: 35px 0 20px 0;
-            text-align: center;
-        }
-
-        .btn-start {
-            display: inline-block;
-            background-color: var(--primary-blue);
-            color: #fff;
-            padding: 16px 45px;
-            font-size: 1.3em;
+        .section-title {
             font-weight: 700;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(44, 75, 125, 0.3);
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .btn-start:hover {
-            background-color: var(--secondary-gold);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(182, 154, 94, 0.4);
-            color: #fff;
-        }
-
-        .footer-text {
-            margin-top: 30px;
+            color: var(--secondary-gold);
+            margin-bottom: 12px;
             font-size: 1.05em;
         }
 
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bullet-list li {
+            margin-bottom: 6px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .bullet-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--secondary-gold);
+            margin-left: 10px;
+            margin-top: 9px;
+            flex-shrink: 0;
+        }
+
+        .footer-text {
+            margin-top: 24px;
+            font-size: 1.03em;
+        }
+
         .signature-block {
-            margin-top: 25px;
+            margin-top: 18px;
             text-align: left;
             direction: rtl;
         }
@@ -133,17 +168,46 @@
             display: block;
         }
 
+        .action-area {
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .btn-start {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: #fff;
+            padding: 14px 42px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.25);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .btn-start:hover {
+            background-color: var(--secondary-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 9px 24px rgba(148, 119, 61, 0.35);
+            color: #fff;
+        }
+
         @media (max-width: 700px) {
             .container {
-                padding: 25px 20px;
+                padding: 26px 18px 24px;
             }
-            .btn-start {
-                width: 100%;
-                padding: 14px;
-                font-size: 1.1em;
+            .to-line span.placeholder {
+                display: block;
+                margin-top: 6px;
+                min-width: 100%;
             }
             .signature-block {
                 text-align: right;
+            }
+            .btn-start {
+                width: 100%;
             }
         }
     </style>
@@ -157,26 +221,49 @@
         <img src="2.jpeg" alt="قائمة أبعاد الذات القرائية" class="title-calligraphy">
     </div>
 
-    <div class="formal-text">
-        <p class="greeting-line">
-            سعادة الأستاذ الدكتور/ ........................................................................... حفظه الله
-        </p>
-        <p>
-            السلام عليكم ورحمة الله وبركاته،   وبعد:
-        </p>
-        <p>
-            فيقوم الباحث بإجراء دراسة تستهدف تنمية مهارات فهم النص النبوي والذاتية القرائية لدى متعلمي اللغة العربية الناطقين بلغات أخرى في الجامعة الإسلامية بالمدينة المنورة، وذلك لاستكمال متطلبات الحصول على درجة العالمية العالية (الدكتوراه) في تعليم اللُّغة العربيَّة لغير النَّاطقين بها، ويتطلَّب هذا تحديد أبعاد الذات القرائية المناسبة لهؤلاء المتعلِّمين في المستوى المتقدِّم.
-        </p>
-        <p>
-            ونعرض على سعادتكم الصُّورة الأوليَّة لهذه القائمة، والمرجو من سعادتكم التَّكرُّم بإبداء الرَّأي بوضع علامة (ü) أمام الحقل المناسب التي تتَّفق مع رأيكم في النقاط الآتية:
-        </p>
+    <div class="top-title">
+        <h1>خطاب تحكيم قائمة أبعاد الذات القرائية</h1>
+    </div>
+
+    <div class="letter-box">
+        <div class="to-line">
+            سعادة الأستاذ الدكتور/
+            <span class="placeholder">...........................................................................</span>
+            حفظه الله
+        </div>
+        <div class="salam-line">
+            السلام عليكم ورحمة الله وبركاته، وبعد:
+        </div>
+        <div class="formal-text">
+            <p>
+                يقوم الباحث بإجراء دراسة تستهدف تنمية مهارات فهم النص النبوي والذاتية القرائية لدى متعلمي اللغة العربية الناطقين بلغات أخرى في الجامعة الإسلامية بالمدينة المنورة، وذلك لاستكمال متطلبات الحصول على درجة العالمية العالية (الدكتوراه) في تعليم اللُّغة العربيَّة لغير النَّاطقين بها، ويتطلَّب هذا تحديد أبعاد الذات القرائية المناسبة لهؤلاء المتعلِّمين في المستوى المتقدِّم.
+            </p>
+            <p>
+                ونعرض على سعادتكم الصُّورة الأوليَّة لهذه القائمة، والمرجو من سعادتكم التكرُّم بإبداء الرَّأي بوضع علامة (ü) أمام الحقل المناسب الذي يتَّفق مع رأيكم في النقاط الآتية:
+            </p>
+        </div>
     </div>
 
     <div class="section-box">
-        <p><span class="bullet-point">●</span> مدى اتِّساق الأبعاد الفرعيَّة مع البعد الرئيس المنبثق منه.</p>
-        <p><span class="bullet-point">●</span> مدى مناسبة هذه الأبعاد لطلاب المستوى الرَّابع في معهد تعليم اللُّغة العربيَّة لغير النَّاطقين بها.</p>
-        <p><span class="bullet-point">●</span> مدى الدِّقة العِلميَّة والصِّحَّة اللُّغويَّة لكلِّ بُعدٍ من الأبعاد.</p>
-        <p><span class="bullet-point">●</span> مقترحات أخرى لسعادتكم بالحذف أو الإضافة أو التَّعديل لمفردات القائمة.</p>
+        <div class="section-title">محاور التحكيم المطلوبة:</div>
+        <ul class="bullet-list">
+            <li>
+                <span class="bullet-dot"></span>
+                <span>مدى اتِّساق الأبعاد الفرعيَّة مع البعد الرئيس المنبثق منه.</span>
+            </li>
+            <li>
+                <span class="bullet-dot"></span>
+                <span>مدى مناسبة هذه الأبعاد لطلاب المستوى الرَّابع في معهد تعليم اللُّغة العربيَّة لغير النَّاطقين بها.</span>
+            </li>
+            <li>
+                <span class="bullet-dot"></span>
+                <span>مدى الدِّقة العِلميَّة والصِّحَّة اللُّغويَّة لكلِّ بُعدٍ من الأبعاد.</span>
+            </li>
+            <li>
+                <span class="bullet-dot"></span>
+                <span>مقترحات أخرى لسعادتكم بالحذف أو الإضافة أو التَّعديل لمفردات القائمة.</span>
+            </li>
+        </ul>
     </div>
 
     <div class="footer-text">
@@ -190,7 +277,7 @@
 
     <div class="action-area">
         <a href="https://script.google.com/macros/s/AKfycbxcHBy16--jhBtBTEh6WcgcTxSAqOB5KaBy12VxwpUcumGAre-3tqHp3jhtUOuX5Z8zUA/exec" class="btn-start">
-            اضغط هنا لبدء تعبئة نموذج التحكيم
+            الانتقال إلى نموذج التحكيم
         </a>
     </div>
 
