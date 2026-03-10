@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تعليمات مقياس أبعاد الذات القرائية</title>
+    <title>تحكيم قائمة أبعاد الذات القرائية</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,15 +16,12 @@
             --background-light: #FFFFFF;
             --text-color: #333333; 
             --section-bg: #FFFBF0; 
-            --correct-bg: #E9F7EF; 
-            --correct-border: #27AE60; 
             --default-border: #E0E0E0; 
-            --box-bg: #FFFFFF;
         }
 
         body {
             font-family: 'Noto Naskh Arabic', 'Cairo', sans-serif;
-            line-height: 1.6; 
+            line-height: 1.8; 
             margin: 0;
             padding: 20px;
             background-color: #F9F9F9;
@@ -37,23 +34,25 @@
 
         .container {
             width: 100%;
-            max-width: 850px; 
+            max-width: 900px; 
             background-color: var(--background-light);
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            padding: 40px;
+            padding: 40px 50px;
             border: 1px solid #ECECEC;
-            text-align: center;
         }
 
         .header-logos {
-            margin-bottom: 30px;
+            text-align: center;
+            margin-bottom: 25px;
         }
+
         .logo-uni {
             max-width: 160px;
             height: auto;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
+
         .title-calligraphy {
             max-width: 100%;
             height: auto;
@@ -62,20 +61,18 @@
         }
 
         .formal-text {
-            font-size: 1.15em;
-            margin-bottom: 25px;
+            font-size: 1.1em;
+            margin-bottom: 30px;
             text-align: right;
-        }
-        
-        .formal-text p {
-            margin: 0;
-            margin-bottom: 12px;
+            color: #222;
         }
 
-        .greeting {
-            font-size: 1.3em;
+        .formal-text p {
+            margin: 0 0 14px 0;
+        }
+
+        .greeting-line {
             font-weight: 700;
-            margin-bottom: 20px;
             color: var(--primary-blue);
         }
 
@@ -83,28 +80,10 @@
             background-color: var(--section-bg); 
             border: 1px solid #EEE0C7;
             border-radius: 8px;
-            margin-top: 25px;
-            overflow: hidden;
+            margin-top: 20px;
+            padding: 20px 25px;
             text-align: right;
-        }
-
-        .section-header {
-            font-weight: 800;
-            color: var(--secondary-gold); 
-            background-color: #FFFAE6; 
-            display: block;
-            font-size: 1.2em;
-            padding: 15px 20px; 
-            border-bottom: 1px solid #EEE0C7;
-            font-family: 'Cairo', sans-serif;
-        }
-        
-        .section-detail {
-            padding: 25px;
-            display: block;
-            font-size: 1.05em;
-            color: #444;
-            font-weight: 500;
+            font-size: 1.02em;
         }
 
         .bullet-point {
@@ -114,15 +93,16 @@
         }
 
         .action-area {
-            margin: 40px 0;
+            margin: 35px 0 20px 0;
             text-align: center;
         }
+
         .btn-start {
             display: inline-block;
             background-color: var(--primary-blue);
             color: #fff;
-            padding: 18px 50px;
-            font-size: 1.4em;
+            padding: 16px 45px;
+            font-size: 1.3em;
             font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
@@ -130,6 +110,7 @@
             box-shadow: 0 4px 15px rgba(44, 75, 125, 0.3);
             font-family: 'Cairo', sans-serif;
         }
+
         .btn-start:hover {
             background-color: var(--secondary-gold);
             transform: translateY(-3px);
@@ -137,80 +118,83 @@
             color: #fff;
         }
 
-        .footer-note {
+        .footer-text {
             margin-top: 30px;
-            font-weight: 600;
-            font-size: 1.1em;
-            text-align: center;
-            color: var(--primary-blue);
+            font-size: 1.05em;
         }
 
-        .researcher-card {
-            margin-top: 40px;
-            background-color: #F9F9F9;
-            border: 1px solid var(--primary-blue);
-            padding: 12px 25px;
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--primary-blue);
+        .signature-block {
+            margin-top: 25px;
+            text-align: left;
+            direction: rtl;
         }
 
-        @media (max-width: 600px) {
-            .btn-start { width: 100%; padding: 15px; font-size: 1.2em; }
+        .signature-line {
+            display: block;
         }
 
+        @media (max-width: 700px) {
+            .container {
+                padding: 25px 20px;
+            }
+            .btn-start {
+                width: 100%;
+                padding: 14px;
+                font-size: 1.1em;
+            }
+            .signature-block {
+                text-align: right;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <div class="header-logos">
-            <img src="logo.png" alt="شعار الجامعة الإسلامية" class="logo-uni">
-            <img src="2.jpeg" alt="قائمة أبعاد الذات القرائية" class="title-calligraphy">
-        </div>
-
-        <div class="formal-text">
-            <p class="greeting">أَخِي الطَّالِبِ: السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ.</p>
-            <p>
-                يَهْدِفُ هَذَا المِقْيَاسُ إِلَى التَّعَرُّفِ عَلَى مُسْتَوَى الذَّاتِ القِرَائِيَّةِ لَدَيْكَ فِي أَرْبَعَةِ أَبْعَادٍ رَئِيسَةٍ، 
-                مِنْ خِلَالِ عَدَدٍ مِنَ البُنُودِ الَّتِي تَتَعَلَّقُ بِمَهَارَاتِكَ، 
-                وَإِحْسَاسِكَ بِذَاتِكَ القِرَائِيَّةِ، وَمُثَابَرَتِكَ فِي القِرَاءَةِ، 
-                وَتَفَاعُلِكَ مَعَ النُّصُوصِ النَّبَوِيَّةِ المَقْرُوءَةِ، 
-                آمُلُ مِنْكَ الإِجَابَةَ عَلَى جَمِيعِ بُنُودِ المِقْيَاسِ بِكُلِّ دِقَّةٍ وَمَوْضُوعِيَّةٍ.
-            </p>
-        </div>
-
-        <div class="section-box">
-            <span class="section-header">تَعْلِيمَاتُ المِقْيَاسِ</span>
-            <span class="section-detail">
-                <p>لِتَحْقِيقِ أَفْضَلِ أَدَاءٍ فِي هَذَا المِقْيَاسِ يُرْجَى مِنْكَ الِالْتِزَامُ بِمَا يَأْتِي:</p>
-                <span class="bullet-point">●</span> سَجِّلْ بَيَانَاتِكَ فِي وَرَقَةِ المِقْيَاسِ قَبْلَ البَدْءِ فِي الإِجَابَةِ.<br>
-                <span class="bullet-point">●</span> اقْرَأْ كُلَّ بَنْدٍ مِنْ بُنُودِ المِقْيَاسِ قِرَاءَةً وَاعِيَةً وَمُرَكَّزَةً قَبْلَ اخْتِيَارِ الإِجَابَةِ.<br>
-                <span class="bullet-point">●</span> أَجِبْ عَنْ جَمِيعِ بُنُودِ المِقْيَاسِ، وَلَا تَتْرُكْ أَيَّ بَنْدٍ دُونَ الإِجَابَةِ عَنْهُ.<br>
-                <span class="bullet-point">●</span> اخْتَرْ إِجَابَةً وَاحِدَةً فَقَطْ تُمَثِّلُ مَدَى مُوَافَقَتِكَ عَلَى كُلِّ بَنْدٍ.<br>
-                <span class="bullet-point">●</span> ضَعْ عَلَامَةَ (✔) عَلَى المُؤَشِّرِ الَّذِي يُعَبِّرُ عَنْ إِجَابَتِكَ فِي كُلِّ بَنْدٍ، وَذَلِكَ فِي وَرَقَةِ المِقْيَاسِ نَفْسِهَا.<br>
-                <span class="bullet-point">●</span> الزَّمَنُ المُحَدَّدُ لِلْإِجَابَةِ عَنِ المِقْيَاسِ (30) دَقِيقَةً، وَاحْرِصْ عَلَى الِانْجَازِ قَبْلَ انْتِهَاءِ الوَقْتِ المُحَدَّدِ.
-            </span>
-        </div>
-
-        <div class="action-area">
-            <a href="https://script.google.com/macros/s/AKfycbxcHBy16--jhBtBTEh6WcgcTxSAqOB5KaBy12VxwpUcumGAre-3tqHp3jhtUOuX5Z8zUA/exec" class="btn-start">
-                اضغط هنا لبدء تعبئة المقياس
-            </a>
-        </div>
-
-        <div class="footer-note">
-            <p>شُكْرِي وَتَقْدِيرِي لِتَعَاوُنِكَ، وَدُعَائِي بِالتَّوْفِيقِ وَالنَّجَاحِ.</p>
-        </div>
-
-        <div class="researcher-card">
-            <span>إِعْدَادُ: أَحْمَد تَشَارِي رَحِيم</span>
-        </div>
-        
+<div class="container">
+    
+    <div class="header-logos">
+        <img src="logo.png" alt="شعار الجامعة الإسلامية" class="logo-uni">
+        <img src="2.jpeg" alt="قائمة أبعاد الذات القرائية" class="title-calligraphy">
     </div>
+
+    <div class="formal-text">
+        <p class="greeting-line">
+            سعادة الأستاذ الدكتور/ ........................................................................... حفظه الله
+        </p>
+        <p>
+            السلام عليكم ورحمة الله وبركاته،   وبعد:
+        </p>
+        <p>
+            فيقوم الباحث بإجراء دراسة تستهدف تنمية مهارات فهم النص النبوي والذاتية القرائية لدى متعلمي اللغة العربية الناطقين بلغات أخرى في الجامعة الإسلامية بالمدينة المنورة، وذلك لاستكمال متطلبات الحصول على درجة العالمية العالية (الدكتوراه) في تعليم اللُّغة العربيَّة لغير النَّاطقين بها، ويتطلَّب هذا تحديد أبعاد الذات القرائية المناسبة لهؤلاء المتعلِّمين في المستوى المتقدِّم.
+        </p>
+        <p>
+            ونعرض على سعادتكم الصُّورة الأوليَّة لهذه القائمة، والمرجو من سعادتكم التَّكرُّم بإبداء الرَّأي بوضع علامة (ü) أمام الحقل المناسب التي تتَّفق مع رأيكم في النقاط الآتية:
+        </p>
+    </div>
+
+    <div class="section-box">
+        <p><span class="bullet-point">●</span> مدى اتِّساق الأبعاد الفرعيَّة مع البعد الرئيس المنبثق منه.</p>
+        <p><span class="bullet-point">●</span> مدى مناسبة هذه الأبعاد لطلاب المستوى الرَّابع في معهد تعليم اللُّغة العربيَّة لغير النَّاطقين بها.</p>
+        <p><span class="bullet-point">●</span> مدى الدِّقة العِلميَّة والصِّحَّة اللُّغويَّة لكلِّ بُعدٍ من الأبعاد.</p>
+        <p><span class="bullet-point">●</span> مقترحات أخرى لسعادتكم بالحذف أو الإضافة أو التَّعديل لمفردات القائمة.</p>
+    </div>
+
+    <div class="footer-text">
+        <p>شاكراً لكم سلفاً حسن تعاونكم، والله يحفظكم ويرعاكم.</p>
+    </div>
+
+    <div class="signature-block">
+        <span class="signature-line">الباحث: أحمد تشاري رحيم</span>
+        <span class="signature-line">الجوال: 0599190935</span>
+    </div>
+
+    <div class="action-area">
+        <a href="https://script.google.com/macros/s/AKfycbxcHBy16--jhBtBTEh6WcgcTxSAqOB5KaBy12VxwpUcumGAre-3tqHp3jhtUOuX5Z8zUA/exec" class="btn-start">
+            اضغط هنا لبدء تعبئة نموذج التحكيم
+        </a>
+    </div>
+
+</div>
 
 </body>
 </html>
